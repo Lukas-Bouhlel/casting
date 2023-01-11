@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../style/main.css" rel="stylesheet">    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">CatSting</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="/">Accueil</a>
+                    <a class="nav-link" href="./anecdote.html">Anecdote</a>
+                    <a class="nav-link active" href="#">Races</a>
+                    </div>
+                </div>
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 0H15V5H13V0ZM19.688 6.9L23.194 3.394L24.608 4.808L21.102 8.314L19.688 6.9ZM23 13H28V15H23V13ZM19.688 21.1L21.102 19.687L24.608 23.193L23.194 24.607L19.688 21.1ZM13 23H15V28H13V23ZM3.394 23.192L6.9 19.686L8.314 21.1L4.809 24.606L3.394 23.192ZM0 13H5V15H0V13ZM3.395 4.808L4.809 3.394L8.315 6.9L6.9 8.314L3.395 4.808ZM14 10C14.7911 10 15.5645 10.2346 16.2223 10.6741C16.8801 11.1136 17.3928 11.7384 17.6955 12.4693C17.9983 13.2002 18.0775 14.0044 17.9231 14.7804C17.7688 15.5563 17.3878 16.269 16.8284 16.8284C16.269 17.3878 15.5563 17.7688 14.7804 17.9231C14.0044 18.0775 13.2002 17.9983 12.4693 17.6955C11.7384 17.3928 11.1136 16.8801 10.6741 16.2223C10.2346 15.5645 10 14.7911 10 14C10.0013 12.9395 10.4232 11.9229 11.173 11.173C11.9229 10.4232 12.9395 10.0013 14 10ZM14 8C12.8133 8 11.6533 8.35189 10.6666 9.01118C9.67988 9.67047 8.91085 10.6075 8.45672 11.7039C8.0026 12.8003 7.88378 14.0067 8.11529 15.1705C8.3468 16.3344 8.91824 17.4035 9.75736 18.2426C10.5965 19.0818 11.6656 19.6532 12.8295 19.8847C13.9933 20.1162 15.1997 19.9974 16.2961 19.5433C17.3925 19.0892 18.3295 18.3201 18.9888 17.3334C19.6481 16.3467 20 15.1867 20 14C20 12.4087 19.3679 10.8826 18.2426 9.75736C17.1174 8.63214 15.5913 8 14 8Z" fill="black"/>
+                </svg>
+            </div>
+          </nav>
+    </header>
+    <section class="mt-5">
+        <div class="container text-center">
+            <div class="row container-news">
+              <div class="col-4 d-flex">
+                <div class="col-races-filters">
+                    <p class="title-races">Races <span id="results">5 résultats</span></p>
+                    <div class="d-flex container-filtres">
+                        <select id="filtre-pays" class="filtre">
+                            <option value="">Par pays</option>
+                        </select>
+                        <select id="filtre-pelage" class="filtre">
+                            <option value="">Par pelage</option>
+                        </select>                    
+                    </div>
+                    <div>
+                        <ul class="container-list">
+                            <li>Persan</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div-style-filters">
+                    <div></div>
+                </div>
+              </div>
+              <div class="col col-news">
+                <h2>Races</h2>
+                <p id="races-numbers"></p>
+              </div>
+            </div>
+          </div>
+    </section>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

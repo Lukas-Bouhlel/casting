@@ -40,3 +40,47 @@ h2 {
     border: 0;
     padding: 10px 30px;
 }
+.col-races-filters {
+    display: grid;
+    justify-content: flex-start;
+    background: #343434;
+    border-radius: 10px 0px 0px 10px;
+    padding: 32px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+}
+.title-races {
+    color: #FF7F57;
+    text-align: start;
+}
+#results {
+    color: white;
+}
+.filtre {
+    color: #121212;
+    background: #FF7F57;
+    border: 0;
+    border-radius: 5px;
+    width: 50%;
+}
+.container-filtres{
+    gap: 10px;
+}
+.container-list {
+    list-style: none;
+    padding: 10px;
+    text-align: start;
+    color: white;
+    margin-top: 2%;
+    border-bottom: 1px solid #FF7F57;
+}
+.div-style-filters {
+    width: 20px;
+    border-radius: 0px 10px 10px 0px;
+    background: #EFEFEF;
+}
+.div-style-filters > div {
+    background-color: #FF7F57;
+    height: 104px;
+    margin-top: 33px;
+}
