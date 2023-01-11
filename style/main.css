@@ -33,3 +33,10 @@ h2 {
 .container-news {
     gap: 3%;
 }
+.button-anecdote {
+    background: #FF7F57;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    padding: 10px 30px;
+}
