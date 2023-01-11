@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: 'Roboto';
+}
+nav {
+    background: #FF7F57;
+    font-size: 16px;
+}
+.navbar-brand {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+}
+.active {
+    font-weight: 700;
+}
+.nav-link {
+    color: #121212;
+    font-size: 16px;
+}
+.col-news {
+    background: #343434;
+    border-radius: 10px;
+    padding: 32px;
+}
+h2 {
+    color: #FF7F57;
+}
+#hr {
+    border-top: none;
+}
+.container-news {
+    gap: 3%;
+}
