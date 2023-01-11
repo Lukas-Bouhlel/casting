@@ -2,37 +2,46 @@ body {
     margin: 0;
     font-family: 'Roboto';
 }
+
 nav {
     background: #FF7F57;
     font-size: 16px;
 }
+
 .navbar-brand {
     text-decoration: none;
     color: white;
     font-weight: 700;
     font-size: 30px;
 }
+
 .active {
     font-weight: 700;
 }
+
 .nav-link {
     color: #121212;
     font-size: 16px;
 }
+
 .col-news {
     background: #343434;
     border-radius: 10px;
     padding: 32px;
 }
+
 h2 {
     color: #FF7F57;
 }
+
 #hr {
     border-top: none;
 }
+
 .container-news {
     gap: 3%;
 }
+
 .button-anecdote {
     background: #FF7F57;
     border-radius: 5px;
@@ -40,6 +49,14 @@ h2 {
     border: 0;
     padding: 10px 30px;
 }
+
+.paragraph {
+    color: white;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 50px;
+}
+
 .col-races-filters {
     display: grid;
     justify-content: flex-start;
@@ -49,13 +66,16 @@ h2 {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
 }
+
 .title-races {
     color: #FF7F57;
     text-align: start;
 }
+
 #results {
     color: white;
 }
+
 .filtre {
     color: #121212;
     background: #FF7F57;
@@ -63,9 +83,11 @@ h2 {
     border-radius: 5px;
     width: 50%;
 }
-.container-filtres{
+
+.container-filtres {
     gap: 10px;
 }
+
 .container-list {
     list-style: none;
     padding: 10px;
@@ -74,12 +96,14 @@ h2 {
     margin-top: 2%;
     border-bottom: 1px solid #FF7F57;
 }
+
 .div-style-filters {
     width: 20px;
     border-radius: 0px 10px 10px 0px;
     background: #EFEFEF;
 }
-.div-style-filters > div {
+
+.div-style-filters>div {
     background-color: #FF7F57;
     height: 104px;
     margin-top: 33px;
