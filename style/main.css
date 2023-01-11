@@ -25,7 +25,6 @@ nav {
 }
 
 .col-news {
-    background: #343434;
     border-radius: 10px;
     padding: 32px;
 }
@@ -51,7 +50,6 @@ h2 {
 }
 
 .paragraph {
-    color: white;
     font-style: italic;
     font-weight: 500;
     font-size: 50px;
@@ -107,4 +105,14 @@ h2 {
     background-color: #FF7F57;
     height: 104px;
     margin-top: 33px;
+}
+
+.light {
+    background-color: #343434;
+    color: white;
+}
+
+.dark {
+    background-color: white;
+    color: #343434;
 }
