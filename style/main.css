@@ -112,7 +112,21 @@ h2 {
     color: white;
 }
 
+.light .col-news {
+    background-color: white;
+    color: #343434;
+}
+
 .dark {
     background-color: white;
     color: #343434;
+}
+
+.dark .col-news {
+    background-color: #343434;
+    color: white;
+}
+
+#change-theme {
+    border: 0;
 }

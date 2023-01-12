@@ -29,8 +29,10 @@ loadAllFunction();
 async function anecdotes() {
     sendRequest('https://catfact.ninja/facts')
     .then(res => {
-        let data = res.total;
-        paragraph1.textContent += data;
+        if(paragraph1 != null){
+            let data = res.total;
+            paragraph1.textContent += data;            
+        }
     });
 }
 
@@ -38,13 +40,21 @@ async function anecdotes() {
 async function races() {
     sendRequest('https://catfact.ninja/breeds')
     .then(res => {
-        let races = res.total;
-        paragraph2.textContent += races;
-        // let coat = res.data;
-        // var tab = [];
-        // coat.forEach(element => 
-        //     tab.push(element.coat)
-        // );
-        // console.log(tab.toString());
+        if (paragraph2 != null) {
+            let races = res.total;
+            paragraph2.textContent += races;            
+        }
+        let coat = res.data;
+        let tab = [];
+        coat.forEach(element => 
+            tab.push(element.coat)
+        );
+        console.log(tab);
+        tab2 = [];
+        tab.forEach(element => 
+            tab2.push(element.length)
+        );
+        console.log(tab2)
+        console.log(Math.max(...tab2));
     });
 }
