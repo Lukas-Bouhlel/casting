@@ -92,7 +92,11 @@ h2 {
     text-align: start;
     color: white;
     margin-top: 2%;
+}
+
+.container-list > li {
     border-bottom: 1px solid #FF7F57;
+    cursor: pointer;
 }
 
 .div-style-filters {

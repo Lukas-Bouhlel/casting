@@ -20,9 +20,8 @@ async function anecdotes() {
     });
 }
 
-
 async function races() {
-    sendRequest('https://catfact.ninja/breeds?limit=100000')
+    sendRequest('https://catfact.ninja/breeds?limit=10000')
     .then(res => {
         if (paragraph2 != null) {
             let races = res.total;
