@@ -19,33 +19,31 @@ async function races() {
         let total = res.total;
         results.textContent += total + " résultats";
         let coats = res.data;
-        let coat = [];
-        coats.forEach(element => 
-            coat.push(element.coat)
-        );
-        coat = [...new Set(coat)];
-        let country = [];
-        coats.forEach(element => {
-            country.push(element.country)
-        })
-        country = [...new Set(country)];
-        coat.forEach(item => {
-            let option = document.createElement('option');
-            option.textContent = item;
-            option.value = item;
-            selectCoat.appendChild(option);
-        });
-        country.forEach(item => {
-            let option = document.createElement('option');
-            option.textContent = item;
-            option.value = item;
-            selectCountry.appendChild(option);
-        });
+        filter(coats, selectCountry);
+        filter(coats, selectCoat);
         coats.forEach(item => {
             let li = document.createElement('li');
             li.textContent = item.breed;
             racesCat.appendChild(li);
         });
+    });
+}
+
+async function filter(tab, classElementHtml) {
+    let array = [];
+    tab.forEach(element => {
+        if(classElementHtml === selectCountry){
+            array.push(element.country)
+        } else if (classElementHtml === selectCoat) {
+            array.push(element.coat)
+        }
+    })
+    array = [...new Set(array)];
+    array.forEach(item => {
+        let option = document.createElement('option');
+        option.textContent = item;
+        option.value = item;
+        classElementHtml.appendChild(option);
     });
 }
 
@@ -56,7 +54,6 @@ async function displayCat(e) {
         let itemsClick = e.target.textContent;
         allCat.forEach(item => {
             if (itemsClick === item.breed) {
-                console.log(item);
                 detailsCat.textContent = item.breed += item.country += item.origin += item.coat += item.pattern;
             }
         });
