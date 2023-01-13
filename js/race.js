@@ -4,19 +4,20 @@ let results = document.getElementById('results');
 let selectCoat = document.querySelector("#filtre-pelage");
 let selectCountry = document.querySelector("#filtre-country");
 let racesCat = document.querySelector("#list-races");
-let cat = document.getElementsByClassName("li-cat");
-console.log(cat);
+let detailsCat = document.querySelector("#races");
 
 async function loadAllFunction() {
     races();
 }
 loadAllFunction();
 
+racesCat.addEventListener('click', displayCat);
+
 async function races() {
     sendRequest('https://catfact.ninja/breeds?limit=1000')
     .then(res => {
-        let data = res.total;
-        results.textContent += data + " résultats";
+        let total = res.total;
+        results.textContent += total + " résultats";
         let coats = res.data;
         let coat = [];
         coats.forEach(element => 
@@ -43,15 +44,21 @@ async function races() {
         coats.forEach(item => {
             let li = document.createElement('li');
             li.textContent = item.breed;
-            li.id = item.breed;
-            li.classList.add("li-cat");
             racesCat.appendChild(li);
         });
     });
 }
 
-cat.addEventListener('click', displayCat);
-
-function displayCat() {
-    console.log(cat)
+async function displayCat(e) {
+    sendRequest('https://catfact.ninja/breeds?limit=1000')
+    .then(res => {
+        let allCat = res.data;
+        let itemsClick = e.target.textContent;
+        allCat.forEach(item => {
+            if (itemsClick === item.breed) {
+                console.log(item);
+                detailsCat.textContent = item.breed += item.country += item.origin += item.coat += item.pattern;
+            }
+        });
+    });
 }
